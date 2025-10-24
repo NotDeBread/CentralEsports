@@ -1,0 +1,242 @@
+<!--Made by Ayden :)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Central Esports</title>
+</head>
+<body>
+
+    <div id="tooltip"></div>
+    
+    <div id="medalPopupContainer" style="z-index: 4;">
+        <div id="medalPopup">
+            <img id="medalPopupImg" src="media/medals/raccoon.png">
+            <div>
+                <span id="medalPopupName">Some medal name</span><br>
+                <em id="medalPopupDesc">This is how to get the medal!!!!!!!</em>
+            </div>
+        </div>
+    </div>
+
+    <div id="profilePopupContainer">
+        <div id="profile">
+            <div id="profileBanner" style="background-image: url(media/pfp/aydenBanner.webp);">
+                <img id="profilePicture" src="media/pfp/ayden.webp">
+                <div id="profileMedals">
+
+                </div>
+            </div>
+            <div id="profileBody">
+                <div style="line-height: 1.2;">
+                    <span id="profileName">Ayden F.</span><br>
+                    <em id="profileUsername">notdebread</em>
+                </div>
+
+                <div id="profileTeams">
+                    <div class="profileTeam"></div>
+                </div>
+
+                <div class="profileSection" id="profileBioContainer">
+                    <em>Bio</em><br>
+                    <div id="profileBio"></div>
+                </div>
+
+                <div class="profileSection" id="profileSocialsContainer">
+                    <em>Socials</em>
+                    <div id="profileConnections">
+                        <div class="profileConnection">
+                            <img><span>YouTube</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profileSection" id="profileSmashContainer">
+                    <em>SSBU Mains</em>
+                    <div id="profileSmash">
+                        <div class="profileSmash">
+                            <div class="profileSmashInfo">
+                                <span>Ridley</span>
+                                <br><em>#65</em>
+                            </div>
+                            <img>
+                        </div>
+                    </div>
+                </div>
+                <div class="profileSection" id="profileMKContainer">
+                    <em>Mario Kart Setup</em>
+                    <div id="profileMarioKart">
+                        <div id="profileMKParts">
+                            <div class="profileMKPart">
+                                <img>
+                                <span>Some part</span>
+                            </div>
+                            <div class="profileMKPart">
+                                <img>
+                                <span>Some part</span>
+                            </div>
+                            <div class="profileMKPart">
+                                <img>
+                                <span>Some part</span>
+                            </div>
+                            <div class="profileMKPart">
+                                <img>
+                                <span>Some part</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profileMKStats">
+                        <div class="profileMKStat">
+                            <div class="profileMKStatName">
+                                <span>Some stat:</span>
+                                <div class="coolLine"></div>
+                                <span>0</span>
+                            </div>
+                            <div class="profileMKStatBar">
+                                <div class="innerProfileMKStatBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div id="profileClose" onclick="doge('profilePopupContainer').style.display = 'none'">Close</div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="profileCloseButtonContainer">
+        <div id="profileClose" onclick="closeProfile()">Close</div>
+    </div>
+
+    <div id="banner">
+        <div id="bannerText">
+            <span>CENTRAL ESPORTS</span><br>
+        </div>
+        <div id="bannerBG"></div>
+    </div>
+
+    <div id="main">
+        <section id="teamsSection">
+            <div class="mainBox" style="height: 300px;">
+                <div class="boxHeader">Teams</div>
+                <div id="teamCardContainer"></div>
+            </div>
+            <div class="mainBox" style="height: fit-content;">
+                <div class="boxHeader">Stats</div>
+                <div id="stats">
+                    <div class="stat">
+                        <span>Total Members</span>
+                        <div class="coolLine"></div>
+                        <span id="totalMemberCount">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBox" style="height: 100%;">
+                <div class="boxHeader">Managers</div>
+                <div id="managerContainer"></div>
+            </div>
+        </section>
+        <section style="width: 600px;" class="mainBox" id="teamMainSection">
+            <div id="teamHeader">
+                <img src="media/games/smash.png" id="teamHeaderImg"><br>
+                <div id="teamHeaderInfo">
+                    <span id="teamHeaderTitle">Super Smash Bros. Ultimate</span>
+                    <em id="teamHeaderCount">0 Members</em>
+                    <!-- <span>Super Smash Bros. Ultimate (SSBU) is a crossover fighting game made by Nintendo in 2018.</span> -->
+                </div>
+            </div>
+            <div id="teamMembersSection">
+                <div class="teamMemberSectionSide">
+                    <div class="teamMemberSection" style="height: fit-content;">
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div class="boxHeader">Captain</div>
+                            <div class="coolLine"></div>
+                        </div>
+    
+                        <div id="teamLeaders"></div>
+                    </div>
+
+                    <div class="teamMemberSection">
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div class="boxHeader">Team Stats</div>
+                            <div class="coolLine"></div>
+                        </div>
+    
+                        <div class="stat">
+                            <span>Win/Loss Ratio</span>
+                            <div class="coolLine"></div>
+                            <span id="wlRatio">0</span>
+                            <img src="media/anglearrow0.svg" id="wlRatioArrow" width="10">
+                        </div>
+                        <div class="stat">
+                            <span>Matches Played</span>
+                            <div class="coolLine"></div>
+                            <span id="matchesPlayed">0</span>
+                        </div>
+
+                        <div id="teamLeaders"></div>
+                    </div>
+                </div>
+                <div class="teamMemberSectionSide">
+                    <div class="teamMemberSection">
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <span class="boxHeader">Members</span>
+                            <div class="coolLine"></div>
+                        </div>
+        
+                        <div id="teamMembers"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="teamMemberSection" style="height: fit-content;">
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <div class="boxHeader">Match History</div>
+                    <div class="coolLine"></div>
+                </div>
+                <div style="display: flex;">
+                    <em>Last updated Oct 21st, 2025</em>
+                    <question text="Since playVS doesn't have an API, match history can only be updated manually.">?</question>
+                </div>
+
+                <div id="matchHistory">
+                    <!-- <div class="match">
+                        <div class="matchInfo">
+                            <span>CHS Mario Kart <em>vs.</em> Boosted Hounds</span><br>
+                            <em>12/08/2025 @4:00pm</em>
+                        </div>
+                        <div class="matchScore">
+                            <img class="matchPFP" src="media/teams/chs.png">
+                            <img src="media/arrow0.svg" class="matchArrow">
+                            <span>0 - 0</span>
+                            <img src="media/arrow1.svg" class="matchArrow">
+                            <img class="matchPFP" src="media/teams/boostedHounds.png">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div id="teamClipsContainer">
+                <span>VODS and Clips will appear here...</span>
+            </div> -->
+        </section>
+    </div>
+
+    <div id="joinContainer">
+        <span style="font-weight: 700; font-size: 1.25em;">Join us!</span><br>
+        <a href="mailto:ashleym@sjsd.k12.mo.us">Email Ms. Murawski</a>
+        <a href="https://discord.gg/UfBZDJnr6W">Join the Discord Server</a>
+    </div>
+
+    <div id="footer">
+        <a id="version">v1.00</a>
+        <span>Made by Ayden with ❤</span>
+    </div>
+
+    <!--Wowie!-->
+
+    <script src="DeBread.js"></script>
+    <script src="players.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
