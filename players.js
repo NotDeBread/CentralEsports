@@ -91,7 +91,7 @@ const players = {
         ],
     },
     murawski: {
-        name: 'Ms. Murawski',
+        name: 'Dr. M',
         username: "",
         medals: ['teacher'],
         manager: true,

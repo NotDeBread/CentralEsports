@@ -92,10 +92,17 @@ for(const key in teams) {
         }, 250);
     }
 
+    teamCard.id = key + 'Card'
+
     doge('teamCardContainer').append(teamCard)
 }
 
 function openTeam(team) {
+    document.querySelectorAll('.teamCard').forEach(elem => {
+        elem.style.boxShadow = '0px 0px var(--accent)'
+    })
+    doge(`${team}Card`).style.boxShadow = '-4px 0px var(--accent)'
+
     doge('teamMainSection').style.opacity = 0
     setTimeout(() => {   
         doge('teamMainSection').style.opacity = 1
@@ -193,7 +200,7 @@ function openTeam(team) {
         }
         renderMatchHistory(team)
     }, 250);
-} openTeam('marioKart')
+}
 
 for(const key in players) {
     const player = players[key]
@@ -237,8 +244,11 @@ for(const key in players) {
                 doge('tooltip').style.opacity = 0
             }
         }
-    
-        doge('managerContainer').append(playerCard)
+        if(player.name === 'Dr. M') {
+            doge('sponsorContainer').append(playerCard)
+        } else {
+            doge('managerContainer').append(playerCard)
+        }
     }
 }
 
@@ -259,11 +269,10 @@ function openProfile(player) {
         doge('profileBioContainer').style.display = ''
         doge('profileBio').innerHTML = players[player].bio
 
-        console.log(players[player])
         if(players[player].bioHeight) {
             doge('profileBio').style.height = players[player].bioHeight + 'px'
         } else {
-            doge('profileBio').style.height = 'unset'
+            doge('profileBio').style.height = 'fit-content'
         }
     } else {
         doge('profileBioContainer').style.display = 'none'
@@ -293,6 +302,7 @@ function openProfile(player) {
             const medal = players[player].medals[key]
             const img = document.createElement('img')
             img.src = `media/medals/${medal}.png`
+            img.style.cursor = 'pointer'
     
             
             doge('profileMedals').append(img)
@@ -372,7 +382,8 @@ function openProfile(player) {
         doge('profileMKContainer').style.display = 'none'
     }
 
-    doge('profileCloseButtonContainer').style.height = '52px'
+    doge('profileCloseButtonContainer').style.opacity = '1'
+    doge('profileCloseButtonContainer').style.scale = '1'
     doge('profileClose').onclick = closeProfile
 }
 
@@ -386,7 +397,8 @@ function closeProfile() {
     doge('profilePopupContainer').style.opacity = '0'
     doge('profilePopupContainer').style.pointerEvents = 'none'
 
-    doge('profileCloseButtonContainer').style.height = '0'
+    doge('profileCloseButtonContainer').style.opacity = '0'
+    doge('profileCloseButtonContainer').style.scale = '0.9'
 } doge('profilePopupContainer').onclick = () => {if(!isHoveringOnProfile) closeProfile()}
 
 function openMedal(medal) {
@@ -402,8 +414,8 @@ function openMedal(medal) {
 }
 
 let isHoveringOnMedalPopup = false
-doge('medalPopup').onmouseenter = () => {isHoveringOnMedalPopup = true; console.log(isHoveringOnMedalPopup)}
-doge('medalPopup').onmouseleave = () => {isHoveringOnMedalPopup = false; console.log(isHoveringOnMedalPopup)}
+doge('medalPopup').onmouseenter = () => {isHoveringOnMedalPopup = true}
+doge('medalPopup').onmouseleave = () => {isHoveringOnMedalPopup = false}
 
 function closeMedalPopup() {
     doge('medalPopup').style.scale = '0.9'
@@ -417,12 +429,14 @@ function closeMedalPopup() {
 
 const tooltip = doge('tooltip')
 function createTooltip(pos, html) {
-    doge('tooltip').style.opacity = 1
-    tooltip.style.left = pos[0]+'px'
-    tooltip.style.top = pos[1]+'px'
-    tooltip.innerHTML = html
-
-    tooltip.style.opacity = 1
+    if(window.innerWidth >= 750) {
+        doge('tooltip').style.opacity = 1
+        tooltip.style.left = pos[0]+'px'
+        tooltip.style.top = pos[1]+'px'
+        tooltip.innerHTML = html
+    
+        tooltip.style.opacity = 1
+    }
 }
 
 doge('totalMemberCount').innerText = Object.keys(players).length
@@ -478,6 +492,9 @@ function renderMatchHistory(team) {
             } else {
                 ratio[1]++
             }
+
+            doge('wins').innerText = ratio[0]
+            doge('losses').innerText = ratio[1]
         }
     
         const wlratio = DeBread.round(ratio[0]/ratio[1],1)
@@ -507,9 +524,7 @@ function renderMatchHistory(team) {
         doge('wlRatio').innerText = '0'
         doge('matchesPlayed').innerText = '0'
         doge('matchHistory').innerHTML = '<p style="text-align:center;">No matches played!</p>'
-        console.log('No matches found!')
     }
-
 }
 
 //Anything but schoolwork

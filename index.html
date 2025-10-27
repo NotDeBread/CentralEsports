@@ -119,7 +119,7 @@
 
     <div id="main">
         <section id="teamsSection">
-            <div class="mainBox" style="height: 300px;">
+            <div class="mainBox" style="height: 100%;">
                 <div class="boxHeader">Teams</div>
                 <div id="teamCardContainer"></div>
             </div>
@@ -133,7 +133,11 @@
                     </div>
                 </div>
             </div>
-            <div class="mainBox" style="height: 100%;">
+            <div class="mainBox" style="height: fit-content;">
+                <div class="boxHeader">Sponsor</div>
+                <div id="sponsorContainer"></div>
+            </div>
+            <div class="mainBox" style="height: fit-content">
                 <div class="boxHeader">Managers</div>
                 <div id="managerContainer"></div>
             </div>
@@ -142,8 +146,8 @@
             <div id="teamHeader">
                 <img src="media/games/smash.png" id="teamHeaderImg"><br>
                 <div id="teamHeaderInfo">
-                    <span id="teamHeaderTitle">Super Smash Bros. Ultimate</span>
-                    <em id="teamHeaderCount">0 Members</em>
+                    <span id="teamHeaderTitle">No team selected!</span>
+                    <em id="teamHeaderCount">Click a team on the left to view its info.</em>
                     <!-- <span>Super Smash Bros. Ultimate (SSBU) is a crossover fighting game made by Nintendo in 2018.</span> -->
                 </div>
             </div>
@@ -163,7 +167,12 @@
                             <div class="boxHeader">Team Stats</div>
                             <div class="coolLine"></div>
                         </div>
-    
+
+                        <div class="stat">
+                            <span>Wins/Losses</span>
+                            <div class="coolLine"></div>
+                            <span><span id="wins" style="color: rgb(100,255,150);">0</span>/<span id="losses" style="color: rgb(255,100,100);">0</span></span>
+                        </div>
                         <div class="stat">
                             <span>Win/Loss Ratio</span>
                             <div class="coolLine"></div>
@@ -196,7 +205,7 @@
                     <div class="coolLine"></div>
                 </div>
                 <div style="display: flex;">
-                    <em>Last updated Oct 21st, 2025</em>
+                    <em>Last updated Oct 27th, 2025</em>
                     <question text="Since playVS doesn't have an API, match history can only be updated manually.">?</question>
                 </div>
 
@@ -224,16 +233,14 @@
 
     <div id="joinContainer">
         <span style="font-weight: 700; font-size: 1.25em;">Join us!</span><br>
-        <a href="mailto:ashleym@sjsd.k12.mo.us">Email Ms. Murawski</a>
+        <a href="mailto:ashleym@sjsd.k12.mo.us">Email Esports Sponsor</a>
         <a href="https://discord.gg/UfBZDJnr6W">Join the Discord Server</a>
     </div>
 
     <div id="footer">
-        <a id="version">v1.00</a>
+        <a id="version" href="https://github.com/notdebread/CentralEsports" target="_blank">v1.01</a>
         <span>Made by Ayden with ❤</span>
     </div>
-
-    <!--Wowie!-->
 
     <script src="DeBread.js"></script>
     <script src="players.js"></script>

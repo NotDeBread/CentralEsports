@@ -311,16 +311,17 @@ question {
 
 #profileCloseButtonContainer {
     position: fixed;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
     width: 100dvw;
-    height: 0px;
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 4;
-    overflow: hidden;
-    transition: height ease-in-out 250ms;
+    opacity: 0;
+    scale: 0.9;
+    user-select: none;
+    transition: opacity ease-in-out 250ms, scale ease-in-out 250ms;
 }
 
 #profileClose {
@@ -330,7 +331,7 @@ question {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     outline: 1px solid white;
     cursor: pointer;
 }
@@ -416,9 +417,10 @@ question {
     padding: 10px;
     line-height: 1.25;
     outline: 1px solid transparent;
-    transition: background-color ease-in-out 100ms, outline ease-in-out 100ms;
+    transition: background-color ease-in-out 100ms, outline ease-in-out 100ms, box-shadow ease-in-out 100ms;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0px 0px var(--accent);
 }
 
 .teamCard:hover {
@@ -791,6 +793,10 @@ question {
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+
+#version:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 1000px) {
