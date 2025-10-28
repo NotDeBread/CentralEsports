@@ -245,7 +245,7 @@ for(const key in players) {
             }
         }
         if(player.name === 'Dr. M') {
-            doge('sponsorContainer').append(playerCard)
+            doge('coachContainer').append(playerCard)
         } else {
             doge('managerContainer').append(playerCard)
         }
