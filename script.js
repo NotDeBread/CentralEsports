@@ -453,9 +453,9 @@ document.body.querySelectorAll('question').forEach(elem => {
 
 function renderMatchHistory(team) {
     doge('matchHistory').innerHTML = ''
+    let ratio = [0,0]
     if(matchHistory[team].length > 0) {        
         let i = 0
-        let ratio = [0,0]
         for(const key in matchHistory[team]) {
             const match = matchHistory[team][key]
             const div = document.createElement('div')
@@ -492,9 +492,6 @@ function renderMatchHistory(team) {
             } else {
                 ratio[1]++
             }
-
-            doge('wins').innerText = ratio[0]
-            doge('losses').innerText = ratio[1]
         }
     
         const wlratio = DeBread.round(ratio[0]/ratio[1],1)
@@ -525,18 +522,25 @@ function renderMatchHistory(team) {
         doge('matchesPlayed').innerText = '0'
         doge('matchHistory').innerHTML = '<p style="text-align:center;">No matches played!</p>'
     }
+
+    doge('wins').innerText = ratio[0]
+    doge('losses').innerText = ratio[1]
 }
 
-//Anything but schoolwork
-// document.querySelectorAll('p,h1,h2,h3,h4,h5,h6,span,strong,em,b,i,u,mark,small,sub,sup,del,ins').forEach(elem => {elem.innerHTML = '<span style="font-size: 100px;">67</span>'})
+const currentDate = new Date()
 
-// document.body.innerHTML = ''
-// const sixseven = document.createElement('span')
-// sixseven.id = 'sixseven'
-// sixseven.innerText = '67'
-// sixseven.width = '100dvw'
-// document.body.append(sixseven)
-// setInterval(() => {
-//     sixseven.innerText = sixseven.innerText + ' ' + sixseven.innerText
-//     console.log(sixseven.innerText.length)
-// }, 1000);
+if(currentDate.getMonth() === 9 && currentDate.getDate() >= 30) {
+    doge('holidayText').innerText = '🎃 HAPPY HALLOWEEN 🎃'
+    doge('holidayText').style.color = 'orange'
+
+    document.documentElement.style.setProperty('--bgColor0','#281c10')
+    document.documentElement.style.setProperty('--bgColor1','#39311e')
+    document.documentElement.style.setProperty('--bgColor2','#534b36')
+    document.documentElement.style.setProperty('--darkBG','#1d120c')
+
+    document.documentElement.style.setProperty('--accent','orange')
+
+    document.querySelectorAll('.decor').forEach(elem => {
+        elem.style.opacity = 1
+    })
+}

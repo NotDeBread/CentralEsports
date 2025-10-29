@@ -341,13 +341,19 @@ question {
 
 
 
+.decor {
+    position: fixed;
+    z-index: 2;
+    image-rendering: pixelated;
+    pointer-events: none;
+    opacity: 0;
+}
+
 #banner {
-    font-family: freshman;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 250px;
-    font-size: 3em;
     position: relative;
 }
 
@@ -359,6 +365,12 @@ question {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+#bannerText span:nth-child(1) {
+    font-family: freshman;
+    font-size: 3em;
 }
 
 #bannerBG {
@@ -806,8 +818,11 @@ question {
 
     #banner {
         text-align: center;
-        font-size: 2em;
         height: 200px;
+    }
+    
+    #bannerText:nth-child(1) {
+        font-size: 0.75em;
     }
     
     .gameCard {

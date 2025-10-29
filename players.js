@@ -155,28 +155,28 @@ const players = {
             }
         },
     },
-    zeke: {
-        name: 'Zeke S.',
-        username: 'mrass',
-        quote: '"The grabbening."',
-        profileColor: '#594327',
-        teams: ['smash'],
+    // zeke: {
+    //     name: 'Zeke S.',
+    //     username: 'mrass',
+    //     quote: '"The grabbening."',
+    //     profileColor: '#594327',
+    //     teams: ['smash'],
 
-        smashFighters: [
-            {
-                name: 'Mario',
-                num: "01"
-            },
-            {
-                name: 'Donkey Kong',
-                num: "02"
-            },
-            {
-                name: 'Mii Brawler',
-                num: "51"
-            }
-        ],
-    },
+    //     smashFighters: [
+    //         {
+    //             name: 'Mario',
+    //             num: "01"
+    //         },
+    //         {
+    //             name: 'Donkey Kong',
+    //             num: "02"
+    //         },
+    //         {
+    //             name: 'Mii Brawler',
+    //             num: "51"
+    //         }
+    //     ],
+    // },
     heather: {
         name: 'Heather C.',
         username: 'Demon',
