@@ -284,7 +284,7 @@ const players = {
             }
         ],
     },
-    Tristan: {
+    tristan: {
         name: 'Tristan M.',
         username: 'Lunarverse',
         quote: '"Can\'t Beat me in Strongest Battlegrounds tho"',
@@ -313,6 +313,20 @@ const players = {
                 num: "6"
             }
         ],
+    },
+    alex: {
+        name: 'Alex A.',
+        username: 'yousonaggy',
+        quote: '',
+        profileColor: '#3f2866',
+        teams: ['rivals'],
+    },
+    clayton: {
+        name: 'Clayton T.',
+        username: 'Lost',
+        bio: 'I love frogs and I write horror',
+        quote: 'Potat frogs are cute',
+        teams: ['rivals'],
     },
 }
 
@@ -348,6 +362,12 @@ const matchHistory = {
             opponent: 'Apollo smashers',
             date: 'Oct 22nd, 2025'
         },
+        {
+            score: [3,1],
+            home: 'CHS Ultimate',
+            opponent: 'PCS Bobcat Prowlers',
+            date: 'Oct 29th, 2025'
+        },
     ],
     marioKart: [
         {
@@ -379,6 +399,12 @@ const matchHistory = {
             home: 'CHS Mario Kart',
             opponent: 'Legends',
             date: 'Oct 23rd, 2025'
+        },
+        {
+            score: [0,2],
+            home: 'CHS Mario Kart',
+            opponent: 'CRKC Pumas',
+            date: 'Oct 30th, 2025'
         },
     ],
     rivals: [

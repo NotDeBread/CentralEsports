@@ -10,14 +10,17 @@ const teams = {
     smash: {
         name: 'Super Smash Bros. Ultimate',
         desc: 'Super Smash Bros. Ultimate (SSBU) is a crossover fighting game made by Nintendo in 2018.',
+        standing: '21st',
     },
     marioKart: {
         name: 'Mario Kart 8 Deluxe',
         desc: 'Mario Kart 8 Deluxe is one of Nintendo\'s many racing games, Mario Kart 8 Deluxe being the 9th game in the series',
+        standing: '12th',
     },
     rivals: {
         name: 'Marvel Rivals',
         desc: 'Marvel Rivals is a hero shooter developed and published by NetEase Games in collaboration with Marvel.',
+        standing: '-'
     },
 }
 
@@ -104,8 +107,9 @@ function openTeam(team) {
     doge(`${team}Card`).style.boxShadow = '-4px 0px var(--accent)'
 
     doge('teamMainSection').style.opacity = 0
-    setTimeout(() => {   
+    setTimeout(() => {
         doge('teamMainSection').style.opacity = 1
+        doge('centralStanding').innerText = teams[team].standing
         
         let pi = 0
     
@@ -168,9 +172,7 @@ function openTeam(team) {
                             <em class="playerCardQuote">${player.quote ?? ""}</em>
                         </div>
                     </div>
-                    <div class="playerCardMedals">
-        
-                    </div>
+                    <div class="playerCardMedals"></div>
                 `
                 playerCard.onclick = () => {
                     openProfile(key)
@@ -531,7 +533,7 @@ const currentDate = new Date()
 
 if(currentDate.getMonth() === 9 && currentDate.getDate() >= 30) {
     doge('holidayText').innerText = '🎃 HAPPY HALLOWEEN 🎃'
-    doge('holidayText').style.color = 'orange'
+    doge('holidayText').style.color = 'var(--accent)'
 
     document.documentElement.style.setProperty('--bgColor0','#281c10')
     document.documentElement.style.setProperty('--bgColor1','#39311e')
