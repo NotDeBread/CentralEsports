@@ -6,62 +6,6 @@ function getAverage(arr) {
     return total / arr.length 
 }
 
-const teams = {
-    smash: {
-        name: 'Super Smash Bros. Ultimate',
-        desc: 'Super Smash Bros. Ultimate (SSBU) is a crossover fighting game made by Nintendo in 2018.',
-        standing: '21st',
-    },
-    marioKart: {
-        name: 'Mario Kart 8 Deluxe',
-        desc: 'Mario Kart 8 Deluxe is one of Nintendo\'s many racing games, Mario Kart 8 Deluxe being the 9th game in the series',
-        standing: '12th',
-    },
-    rivals: {
-        name: 'Marvel Rivals',
-        desc: 'Marvel Rivals is a hero shooter developed and published by NetEase Games in collaboration with Marvel.',
-        standing: '-'
-    },
-}
-
-const medals = {
-    generalManager: {
-        name: 'General Manager'
-    },
-    teamCaptain: {
-        name: 'Team Captian'
-    },
-    websiteDeveloper: {
-        name: 'Website Developer',
-        desc: 'It\'s me!'
-    },
-    mexican: {
-        name: 'Mexican',
-        desc: '🌮'
-    },
-    queen: {
-        name: 'Queen'
-    },
-    raccoon: {
-        name: 'Raccoon'
-    },
-    teacher: {
-        name: 'Teacher'
-    },
-    omni: {
-        name: 'The being in literally everything award',
-        desc: 'Included in every team, and is a general manager.'
-    },
-    smashmvp: {
-        name: 'SSBU MVP',
-        desc: 'Considered the most valuable player on the SSBU team.'
-    },
-    mkmvp: {
-        name: 'Mario Kart MVP',
-        desc: 'Considered the most valuable player on the MK8D team.'
-    },
-}
-
 for(const key in teams) {
     const team = teams[key]
     const teamCard = document.createElement('div')
@@ -516,7 +460,7 @@ function renderMatchHistory(team) {
 
         doge('matchesPlayed').innerText = i
 
-        doge('matchHistory').scrollTop = -10e6
+        doge('matchHistory').scrollTop = -67e6
     } else {
         doge('wlRatioArrow').src = 'media/anglearrow2.svg'
         doge('wlRatio').style.color = 'white'
@@ -546,3 +490,5 @@ if(currentDate.getMonth() === 9 && currentDate.getDate() >= 30) {
         elem.style.opacity = 1
     })
 }
+
+//Anything but schoolwork.

@@ -1,3 +1,153 @@
+const teams = {
+    smash: {
+        name: 'Super Smash Bros. Ultimate',
+        desc: 'Super Smash Bros. Ultimate (SSBU) is a crossover fighting game made by Nintendo in 2018.',
+        standing: '28th',
+    },
+    marioKart: {
+        name: 'Mario Kart 8 Deluxe',
+        desc: 'Mario Kart 8 Deluxe is one of Nintendo\'s many racing games, Mario Kart 8 Deluxe being the 9th game in the series',
+        standing: '10th',
+    },
+    rivals: {
+        name: 'Marvel Rivals',
+        desc: 'Marvel Rivals is a hero shooter developed and published by NetEase Games in collaboration with Marvel.',
+        standing: '-'
+    },
+}
+
+const matchHistory = {
+    smash: [
+        {
+            score: [0,1],
+            home: 'CHS Ultimate',
+            opponent: 'Forfeit',
+            date: 'Sept 24th, 2025'
+        },
+        {
+            score: [3,0],
+            home: 'CHS Ultimate',
+            opponent: 'Oso Plateado JV',
+            date: 'Oct 1st, 2025'
+        },
+        {
+            score: [3,0],
+            home: 'CHS Ultimate',
+            opponent: 'CCA',
+            date: 'Oct 8th, 2025'
+        },
+        {
+            score: [1,0],
+            home: 'CHS Ultimate',
+            opponent: 'BYE',
+            date: 'Oct 15th, 2025'
+        },
+        {
+            score: [2,3],
+            home: 'CHS Ultimate',
+            opponent: 'Apollo smashers',
+            date: 'Oct 22nd, 2025'
+        },
+        {
+            score: [3,1],
+            home: 'CHS Ultimate',
+            opponent: 'PCS Bobcat Prowlers',
+            date: 'Oct 29th, 2025'
+        },
+        {
+            score: [1,3],
+            home: 'CHS Ultimate',
+            opponent: 'Central Lee',
+            date: 'Nov 5th, 2025'
+        },
+    ],
+    marioKart: [
+        {
+            score: [1,2],
+            home: 'CHS Mario Kart',
+            opponent: 'THS_MarioKartGreen',
+            date: 'Sept 25th, 2025'
+        },
+        {
+            score: [2,0],
+            home: 'CHS Mario Kart',
+            opponent: 'Byers Lions',
+            date: 'Oct 2nd, 2025'
+        },
+        {
+            score: [2,0],
+            home: 'CHS Mario Kart',
+            opponent: 'Boosted Hounds',
+            date: 'Oct 9th, 2025'
+        },
+        {
+            score: [1,0],
+            home: 'CHS Mario Kart',
+            opponent: 'BYE',
+            date: 'Oct 16th, 2025'
+        },
+        {
+            score: [1,2],
+            home: 'CHS Mario Kart',
+            opponent: 'Legends',
+            date: 'Oct 23rd, 2025'
+        },
+        {
+            score: [0,2],
+            home: 'CHS Mario Kart',
+            opponent: 'CRKC Pumas',
+            date: 'Oct 30th, 2025'
+        },
+        {
+            score: [2,0],
+            home: 'CHS Mario Kart',
+            opponent: 'The Rocky Wrench Wranglers',
+            date: 'Sep 8th, 2025'
+        },
+    ],
+    rivals: [
+
+    ]
+}
+
+const medals = {
+    generalManager: {
+        name: 'General Manager'
+    },
+    teamCaptain: {
+        name: 'Team Captian'
+    },
+    websiteDeveloper: {
+        name: 'Website Developer',
+        desc: 'It\'s me!'
+    },
+    mexican: {
+        name: 'Mexican',
+        desc: '🌮'
+    },
+    queen: {
+        name: 'Queen'
+    },
+    raccoon: {
+        name: 'Raccoon'
+    },
+    teacher: {
+        name: 'Teacher'
+    },
+    omni: {
+        name: 'The being in literally everything award',
+        desc: 'Included in every team, and is a general manager.'
+    },
+    smashmvp: {
+        name: 'SSBU MVP',
+        desc: 'Considered the most valuable player on the SSBU team.'
+    },
+    mkmvp: {
+        name: 'Mario Kart MVP',
+        desc: 'Considered the most valuable player on the MK8D team.'
+    },
+}
+
 const players = {
     ayden: {
         name: 'Ayden F.',
@@ -270,7 +420,6 @@ const players = {
     fernando: {
         name: 'Fernando M.',
         username: 'Mexican5',
-        medals: ['mexican'],
         teams: ['smash'],
 
         smashFighters: [
@@ -328,86 +477,4 @@ const players = {
         quote: 'Potat frogs are cute',
         teams: ['rivals'],
     },
-}
-
-const matchHistory = {
-    smash: [
-        {
-            score: [0,1],
-            home: 'CHS Ultimate',
-            opponent: 'Forfeit',
-            date: 'Sept 24th, 2025'
-        },
-        {
-            score: [3,0],
-            home: 'CHS Ultimate',
-            opponent: 'Oso Plateado JV',
-            date: 'Oct 1st, 2025'
-        },
-        {
-            score: [3,0],
-            home: 'CHS Ultimate',
-            opponent: 'CCA',
-            date: 'Oct 8th, 2025'
-        },
-        {
-            score: [1,0],
-            home: 'CHS Ultimate',
-            opponent: 'BYE',
-            date: 'Oct 15th, 2025'
-        },
-        {
-            score: [2,3],
-            home: 'CHS Ultimate',
-            opponent: 'Apollo smashers',
-            date: 'Oct 22nd, 2025'
-        },
-        {
-            score: [3,1],
-            home: 'CHS Ultimate',
-            opponent: 'PCS Bobcat Prowlers',
-            date: 'Oct 29th, 2025'
-        },
-    ],
-    marioKart: [
-        {
-            score: [1,2],
-            home: 'CHS Mario Kart',
-            opponent: 'THS_MarioKartGreen',
-            date: 'Sept 25th, 2025'
-        },
-        {
-            score: [2,0],
-            home: 'CHS Mario Kart',
-            opponent: 'Byers Lions',
-            date: 'Oct 2nd, 2025'
-        },
-        {
-            score: [2,0],
-            home: 'CHS Mario Kart',
-            opponent: 'Boosted Hounds',
-            date: 'Oct 9th, 2025'
-        },
-        {
-            score: [1,0],
-            home: 'CHS Mario Kart',
-            opponent: 'BYE',
-            date: 'Oct 16th, 2025'
-        },
-        {
-            score: [1,2],
-            home: 'CHS Mario Kart',
-            opponent: 'Legends',
-            date: 'Oct 23rd, 2025'
-        },
-        {
-            score: [0,2],
-            home: 'CHS Mario Kart',
-            opponent: 'CRKC Pumas',
-            date: 'Oct 30th, 2025'
-        },
-    ],
-    rivals: [
-
-    ]
 }
