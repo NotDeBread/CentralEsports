@@ -22,7 +22,7 @@ const matchHistory = {
             score: [0,1],
             home: 'CHS Ultimate',
             opponent: 'Forfeit',
-            date: 'Sept 24th, 2025'
+            date: 'Sep 24th, 2025'
         },
         {
             score: [3,0],
@@ -60,13 +60,19 @@ const matchHistory = {
             opponent: 'Central Lee',
             date: 'Nov 5th, 2025'
         },
+        {
+            score: [3,2],
+            home: 'CHS Ultimate',
+            opponent: 'Victory Vortex',
+            date: 'Nov 12th, 2025'
+        },
     ],
     marioKart: [
         {
             score: [1,2],
             home: 'CHS Mario Kart',
             opponent: 'THS_MarioKartGreen',
-            date: 'Sept 25th, 2025'
+            date: 'Sep 25th, 2025'
         },
         {
             score: [2,0],
@@ -102,7 +108,13 @@ const matchHistory = {
             score: [2,0],
             home: 'CHS Mario Kart',
             opponent: 'The Rocky Wrench Wranglers',
-            date: 'Sep 8th, 2025'
+            date: 'Nov 6th, 2025'
+        },
+        {
+            score: [0,2],
+            home: 'CHS Mario Kart',
+            opponent: 'GHS Mario Kart Blue Squad',
+            date: 'Nov 13th, 2025'
         },
     ],
     rivals: [
@@ -438,7 +450,6 @@ const players = {
         username: 'Lunarverse',
         quote: '"Can\'t Beat me in Strongest Battlegrounds tho"',
         profileColor: '#702327',
-        medals: ['teamCaptain'],
         teams: ['rivals','smash'],
 
         socials: [
@@ -474,7 +485,7 @@ const players = {
         name: 'Clayton T.',
         username: 'Lost',
         bio: 'I love frogs and I write horror',
-        quote: 'Potat frogs are cute',
+        quote: '"Potat frogs are cute"',
         teams: ['rivals'],
     },
 }
